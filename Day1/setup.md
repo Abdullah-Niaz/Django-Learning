@@ -5,10 +5,9 @@
 - Analyaing the Default     
 - Django Project Structure
 
-
 ## Django: 
     is python framework that allows us to buil web application and websites
-
+    
 ## Install Python Django as a global to create Django Projects
 
 ``python -m pip install Django``
