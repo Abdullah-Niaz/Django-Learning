@@ -1,0 +1,4 @@
+__init__ 
+    file is used to read the folder structure
+    to main what is inside the main folder
+
