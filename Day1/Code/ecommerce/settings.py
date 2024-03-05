@@ -37,7 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # method #1
+    'ecomm'
 ]
+# another way is to make a variable of user insallated apps with name EXTERNEL_APPS 
+# EXTERNEL_APPS = [
+#     'ecomm'
+# ]
+# INSTALLED_APPS = INSTALLED_APPS + EXTERNEL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

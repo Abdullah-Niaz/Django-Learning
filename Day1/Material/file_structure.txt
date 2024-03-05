@@ -1,0 +1,34 @@
+manage.py: 
+    This small but mighty script serves as the gateway to various Django management commands. It’s the tool through which you initiate the development server, create applications, run migrations, and more. manage.py is the conductor's baton, guiding your project's activities.
+
+my_project/settings.py: 
+    As the name suggests, this file houses the settings that configure your Django project. From database configurations to middleware lists, this is where you define how your application functions. It’s akin to the blueprint that shapes the structure of your project’s behavior.
+
+my_project/urls.py:    
+    The URL dispatcher — encoded within urls.py—maps URLs to views. This file determines which view is displayed when a specific URL is accessed. It's like a roadmap that navigates users through the intricacies of your application's pages.
+
+my_project/wsgi.py: 
+    Short for Web Server Gateway Interface, wsgi.py serves as the entry point for your application when deployed on a production server. It's the bridge connecting your application to the web server, enabling it to handle incoming requests.
+
+my_project/asgi.py: 
+    Similar to wsgi.py, asgi.py is the entry point for asynchronous web servers. It stands for Asynchronous Server Gateway Interface and facilitates the handling of asynchronous HTTP requests.
+
+my_project/__init__.py: 
+    This seemingly unassuming file holds the magic that transforms a directory into a Python package. It’s essential for organizing and importing modules across your project
+
+
+
+__init__ 
+    file is used to read the folder structure
+    to main what is inside the main folder
+
+asgi: 
+    asynchronous gateway interface
+setting:
+
+urls:
+    where we manage all the urls of project
+wsgi: 
+    stans for web server gateway interface
+
+
