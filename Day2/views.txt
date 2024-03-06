@@ -1,0 +1,39 @@
+urls are responsible for finding or locating the resource and the action 
+that should be triggered are called Views
+
+The logic that is executed for different URLs (and HTTP methods)
+
+Logic can be written in 
+    --- Function 
+    --- Class
+            ----- Code that handles (evaluates) requests and returns Response
+
+    -- loading and prepare data
+    -- Run any other bussiness logic 
+    -- Prepare and return  response data ( html)
+
+
+
+
+while making a views you need to write a Function to write a bussiness logic or view angainst that URLs that will be hitted
+each view or function take a request parameter return a http response
+
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Hello world)
+
+view has been defined now, we need to define the logic when it should be called. definelty through urls
+create a urls file
+
+import django.url import path
+urlpatterns = [
+    path(")
+]
+
+    --------->>>>>>-----Requests---------->>>>-----------|
+User                                                        Server (Server Database)
+    ---------<<<<<<-----Response----------<<<<-----------|
+
+
+Views are responsible for processing requests ( parsing the URL, Http method and potential reuqests data ) and creating a response
