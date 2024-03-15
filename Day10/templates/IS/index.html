@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "IS/style.css" %}">
+    <title>Filter</title>
+</head>
+<body>
+    <h1>
+        Course Name: <b> {{course_name | upper}} </b> <br>
+        Course Duration: <b> {{course_duration | upper}}</b> <br>
+        Available Course Seats:  <b>{{total_seats | upper}}</b> <br>
+        {{p | truncatechars:10}} <br>
+        {{value | default:"Nothing to Show"}} <br>
+        {{date_value | length}}
+    </h1>
+</body>
+</html>
