@@ -1,0 +1,23 @@
+Adding  more views and urls to the
+Dynamic Path Segments & Captured Values
+
+
+urls.py
+urlpatterns = [
+    <dynamic_segement_identifier>
+    path("<PUT_INDENTIFIER OF YOUR OWN CHIOICE>")
+    path("<concerte_Path>",views.dynamic_function)
+]
+
+views.py
+import django.url httpresponse, httpresponsenotfound
+
+def dynamic_function(request,concrete_path):
+    Challange_text  = none
+    if(month = "janaury"):
+        Challange_text = "this is journy"
+    if(month == "March"):
+        Challange_text = "this is march"
+    else:
+        return httpresponsenotfound("this month is not found")
+    return httpresponse(Challange_text)

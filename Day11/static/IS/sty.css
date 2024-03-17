@@ -1,0 +1,25 @@
+
+
+h1{
+    text-align: center;
+    background-color: blue;
+    color: white;
+}
+h1 > b{
+    color: rgb(183, 165, 201);
+}
+
+p{
+    background-color: blueviolet;
+}
+p>h1{
+    color: black;
+}
+
+ul > li {
+    list-style-type: none;
+}
+tbody{
+    text-align: center;
+    color: red;
+}

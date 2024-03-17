@@ -1,0 +1,31 @@
+apps are the building blocks of the main project
+main project has a sub modules to do every task
+
+app is one small modlue of bigger project
+
+
+project                   apps
+
+Google            Google Search, Google images, Google Maps 
+Amazon            Amazon Shop, Amzaon Prime Videos, Amazon Music 
+
+you own online Shop  | one app or products, carts, admin Area
+
+
+
+jab app ban jay to us k foran bad apni main project ko ja kar btana b ha 
+us ki templates wali setting my jao ur waha add kar do simple
+Method 1
+INSTALLED_APPS = [
+    'ecomm'
+]
+
+# another way is to make a variable of user insallated apps with name EXTERNEL_APPS 
+method 2
+# EXTERNEL_APPS = [
+#     'ecomm'
+# ]
+# INSTALLED_APPS = INSTALLED_APPS + EXTERNEL_APPS
+
+
+

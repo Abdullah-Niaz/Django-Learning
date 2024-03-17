@@ -1,0 +1,33 @@
+What are ULRs ( Routes ) & Views ?
+Unders tanding Requests & Response
+Delivering Content & Processing input
+
+
+This is how urls works?
+    my-page.com/ -----> Show starting page
+    my-page.com/posts ------> show list of all posts
+    my-page.com/posts/python-is-great -----> show a specific post
+
+Urls -----> Results 
+
+
+URL Config / Routes :
+    URL-Action mappings which ensure that certain results are achieved when 
+    certain URLs are entered by te user.
+
+
+import django.url import path
+from . import views
+urlpatterns = [
+    path("janauray",view.index)
+]
+
+
+--once everthing done then, define the apps urls to the 
+urlspatterns of the main project
+-- go to the main main file of ruls and include the path there of app as well as the urls 
+
+urlpatterns = [
+    path('admin/',adnin.site.urls),
+    path('appname',include('appname.urls')),
+]

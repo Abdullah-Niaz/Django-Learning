@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "IS/sty.css" %}">
+    <title>Filter</title>
+</head>
+<body>
+    <h1>DTL</h1>
+        {% for key,value in students.items %}
+            {% comment %} {{key}}:{{value}} <br/>  {% endcomment %}
+            {% for i,j in value.items %}
+                {{i}}:{{j}} <br>
+            {% endfor %}
+        {% endfor %}
+
+    {% comment %} <h1>
+        Course Name: <b> {{course_name | upper}} </b> <br>
+        Course Duration: <b> {{course_duration | upper}}</b> <br>
+        Available Course Seats:  <b>{{total_seats | upper}}</b> <br>
+        Truncate: {{p | truncatechars:10}} <br>
+        default: {{value | default:"Nothing to Show"}} <br>
+        length: {{date_value | length}} <br>
+        Date Time: {{d | date:"Date_Time_Format"}} <br>
+        Float Format: {{a | floatformat:'1' }}  <br>
+        {{b | floatformat:'2' }}  <br>
+        {{c | floatformat:'3' }}  <br>
+        Conditions: <br>
+{#        <input type="text" id='name' placeholder="Enter the Name">#}
+        {% if  name == nm%}
+            <h1>Hello {{nm}} </h1>
+        {% else %}
+            <h1>Nothing we have 🤦‍♂️. Sorry ! for inconvenience</h1>
+        {% endif %}
+        <h1>Iteration {{it}}</h1>
+    </h1>
+
+    <p>
+        <h2>Loop</h2>
+        <ul>    
+            {% for i in st_name  %}
+                <li> {{i}} </li>
+           {% emtpy %}
+                <h1>Ja tur ja ethy kuch nhi </h1>
+            {% endfor %}
+        </ul>
+    </p>
+    <p>
+        <h2>Studnets Data</h2>
+        <ul>    
+            {% for key,value in students.items  %}
+           <li> {{key}}:{{value}} </li>
+            {% endfor %}
+        </ul>
+    </p>
+
+
+    <table border="2px solid blue">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll_No:</th>
+                <th>Addres</th>
+            </tr>
+        </thead>
+        <tbody >
+        <tr>
+            <td>
+
+                <ul>
+                    {% for  name in students.st_name  %}
+                    <li>{{name}}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>
+            <ul>
+                {% for  roll in students.roll_no %}
+                <li>{{roll}}</li>
+                {% endfor %}
+            </ul>
+            </td>
+            <td>
+                <ul>
+                    {% for  address in students.address  %}
+                    <li>{{address}}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        </tbody>
+    </table> {% endcomment %}
+</body>
+</html>
