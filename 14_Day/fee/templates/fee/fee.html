@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './fee/css/index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="stu">
+        <h1>Fee of {{user.name}} </h1>
+        <img src="{% static './fee/images/male.png' %}" alt="male">
+    </div>
+    <div class="box">
+        <h2>
+            ID: {{user.user_id}} <br>
+            Name: {{user.name}} <br>
+            Email: {{user.email}} <br>
+            Phone: {{user.phone}} <br>
+        </h2>
+        <h2>
+            ID: {{user.user_id}} <br>
+            Name: {{user.name}} <br>
+            Email: {{user.email}} <br>
+            Phone: {{user.phone}} <br>
+        </h2>
+        <h2>
+            ID: {{user.user_id}} <br>
+            Name: {{user.name}} <br>
+            Email: {{user.email}} <br>
+            Phone: {{user.phone}} <br>
+        </h2>
+        <h2>
+            ID: {{user.user_id}} <br>
+            Name: {{user.name}} <br>
+            Email: {{user.email}} <br>
+            Phone: {{user.phone}} <br>
+        </h2>
+    </div>
+</body>
+</html>

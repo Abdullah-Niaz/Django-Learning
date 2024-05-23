@@ -1,0 +1,27 @@
+body{
+    background-color: green;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+.stu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    border-right: 2px solid black;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.box{
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    background-color: goldenrod;
+}
