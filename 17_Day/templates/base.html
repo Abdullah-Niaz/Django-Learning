@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block csscore %}
+        <link rel="stylesheet" href="{% static 'base.css' %}">
+    {% endblock csscore %}
+    <title>Base Template of the website</title>
+</head>
+<body>
+    <h1>{% block heading %}Base Page{% endblock heading%}</h1>
+
+    {% block content %}
+    {% endblock content%}
+</body>
+</html>

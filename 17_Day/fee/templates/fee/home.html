@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block csscore %}
+    {{ block.super }}
+        <link rel="stylesheet" href="{% static 'fee/style.css' %}">
+{% endblock csscore %}
+
+{% block heading %}
+<h1>My FEE</h1>
+{% endblock heading %}
+
+{% block content %}
+    {% if dic %}
+        {% for key, value in dic.items %}
+            <p>{{ key }}: {{ value }}</p>
+        {% endfor %}
+    {% else %}
+        <p>No data available.</p>
+    {% endif %}
+{% endblock content %}
