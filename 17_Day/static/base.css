@@ -8,3 +8,11 @@ body{
     color: white;
 
 }
+ /* Ensure this CSS is applied after Bootstrap's CSS */
+ .custom-carousel .carousel-inner {
+    height: auto; /* Set your desired height */
+  }
+
+img {
+    object-fit: cover;
+  }

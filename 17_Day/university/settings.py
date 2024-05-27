@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 ]
 EXTERNAL_APPS  = [
     'fee',
-    'depart'
+    'depart',
+    'bootstrap5'
 ]
 INSTALLED_APPS += EXTERNAL_APPS
 
