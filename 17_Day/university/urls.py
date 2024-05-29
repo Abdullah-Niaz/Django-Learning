@@ -23,6 +23,8 @@ from . import views as cv
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',cv.home),
+    path('about/',cv.about),
+    path('contact/',cv.contact),
     path('fee/',include('fee.urls')),
     path('depart/',include('depart.urls')),
 ]

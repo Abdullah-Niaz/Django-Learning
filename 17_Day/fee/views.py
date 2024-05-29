@@ -9,3 +9,11 @@ def fee_home(request):
         'item3': 'value3',
     }
     return render(request,'fee/home.html',{'dic':dic})
+
+
+def feestructure(request):
+    return render(request,'fee/feestructure.html',{"feestr":"/fee/feestructure"})
+def feeplans(request):
+    return render(request,'fee/feeplans.html')
+def relaxation(request):
+    return render(request,'fee/relaxation.html')
