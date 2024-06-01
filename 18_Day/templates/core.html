@@ -9,6 +9,16 @@
 
     <title>Home Page of the Ecommerce Store</title>
 </head>
+<style>
+  table{
+    margin:10px
+  }
+  th,td{
+    margin:5px;
+    padding:10px;
+    border:2px solid blue;
+  }
+</style>
 <body>
 
     {% comment %} Nava Starts Here  {% endcomment %}
@@ -43,6 +53,35 @@
       {% include "top.html" with p="P" c="C+" j="Jav" js="js" only %}
     {% block heading %}
     <h1 class="text-light bg-dark text-center">Home page</h1>
+
+      <table border="2px solid black">
+        <thead>
+          <tr> 
+            <th>Id: </th>
+            <th>StuId: </th>
+            <th>StuName: </th>
+            <th>StuAddres: </th>
+            <th>StuMessage: </th>
+          </tr>
+        </thead>
+
+
+        <tbody>
+          {% if stu %}
+            {% for x  in stu  %}
+              <tr>
+                <td>{{x.id}}</td>
+                <td>{{x.stuid}}</td>
+                <td>{{x.stuName}}</td>
+                <td>{{x.stuAddress}}</td>
+                <td>{{x.stuMessage}}</td>
+              </tr> 
+            {% endfor %}
+          {% endif %}
+          
+
+        </tbody>
+      </table>
     {% endblock heading %}
       {% comment %} <h2>hello</h2> {% endcomment %}
     
