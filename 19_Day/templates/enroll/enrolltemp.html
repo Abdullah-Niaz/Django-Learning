@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'enroll/style.css' %}">
+    <title>Core</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student_ID</th>
+                <th>Student_Name</th>
+                <th>Student_Address</th>
+                <th>Student_Message</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% if stu %}
+                {% for st in  stu %}
+
+                        <tr>
+                            <td>{{ st.id }}</td>
+                            <td>{{ st.stuid }}</td>
+                            <td>{{ st.stuName }}</td>
+                            <td>{{ st.stuAddress }}</td>
+                            <td>{{ st.stuMessage }}</td>
+                        </tr>
+                {% endfor %}
+                {% else %}
+                    <h1>Data Not exits</h1>
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>
