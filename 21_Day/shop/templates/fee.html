@@ -3,4 +3,21 @@
 
 {% block heading %}
     <h1>Fee Page</h1>
+    {% if sh %}
+        {% for st  in  shop %}
+            {{st}}
+                    {{st.product_name}}
+                    {{st.product_price}}
+                    {{st.description}}
+                    {{st.category}}
+                    {{st.brand}}
+                    {{st.image}}
+                    {{st.stock_quantity}}
+                    {{st.created_at}}
+                    {{st.updated_at}}
+                    {{st.is_featured}} 
+                    {{st.is_availabl}}
+        {% endfor %}
+    {% endif %}
+        <h1>nothing</h1>
 {% endblock heading %}

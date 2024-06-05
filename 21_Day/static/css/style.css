@@ -2,3 +2,9 @@
     background-color: green;
     color: white;
 }
+table > th{
+    background-color: gray;
+}
+table>tr,th,td{
+    border:2px solid blue;
+}

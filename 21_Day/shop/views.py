@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from  .models import *
+from .forms import *
 # Create your views here.
 
 fee_urls ={
@@ -9,7 +11,9 @@ fee_urls ={
 shop = 'shop'
 
 def fee(request):
-    return render(request, 'fee.html')
+    sh = EcommerceProduct.objects.all().values()
+    f = FormRegistration()
+    return render(request, 'fee.html',{"shop":sh,"f":f})
 
 def feestructure(request):
     return render(request, 'feestructure.html')
