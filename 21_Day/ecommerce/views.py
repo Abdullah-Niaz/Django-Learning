@@ -12,7 +12,7 @@ default_urls = {
 
 def home(request):
     sh = EcommerceProduct.objects.all().values()
-    f = FormRegistration(auto_id='some_%s',label_suffix='-',field_order=['name','email',])
+    f = FormRegistration(auto_id='id_%s',label_suffix=':',field_order=['name','email',])
     print(dir(f))
     return render(request, 'home.html', {"df_urls": default_urls,"shop":sh,"f":f})
 

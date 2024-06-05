@@ -40,9 +40,37 @@
     {% block heading %}
     <h1>Home Page</h1>
     {% endblock heading %}
-    
-    {{f.name.label}}
-    {{f.name.input}}
+
+    <form action="" method="get">
+        <div>
+            <label for="id_name">Name:</label>
+            <input type="text" name="name" id="id_name">
+        </div>
+        <div>
+            <label for="id_email">Email:</label>
+            <input type="email" name="email" id="id_email">
+        </div>
+    </form>
+    <hr><hr>
+    <form action="" method="get">
+        <div>
+            <label for="id_name">Name:</label>
+            <input type="text" name="name" id="id_name">
+        </div>
+        <div>
+            <label for="id_email">Email:</label>
+            <input type="email" name="email" id="id_email">
+        </div>
+    </form>
+    <hr><hr>
+    <div>
+        <label for="{{f.name.id_for_label}}">Name:</label>
+        {{f.name}}
+    </div>
+    <div>
+        {{f.email.label_tag}}
+        {{f.email}}
+    </div>
     <hr><hr>
     {{f}}
 
