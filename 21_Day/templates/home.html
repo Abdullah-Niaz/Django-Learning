@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Shop | Home Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <ul>
+        {% comment %} <li><a href="{{ df_urls.home }}">Home</a></li>
+        <li><a href="{{ df_urls.about }}">About</a></li>
+        <li><a href="{{ df_urls.contact }}">Contact</a></li>
+        <li><a href="{{ df_urls.blog }}">Blog</a></li> {% endcomment %}
+        {% comment %} <li><a href="{{ fee_url.blog }}">Fee</a></li>
+        <li><a href="{{ fee_url.blog }}">Fee Structure</a></li> {% endcomment %}
+
+        
+        {% comment %} <li><a href="/">Home</a></li>
+        <li><a href="/blog">blog</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact`</a></li> {% endcomment %}
+
+
+        <li><a href="{% url "home" %}">Home</a></li>
+        <li><a href="{% url "blog" %}">blog</a></li>
+        <li><a href="{% url "about" %}">About</a></li>
+        <li><a href="{% url "contact" %}">Contact`</a></li>
+        <li><a href="{% url 'shop:fee' %}">FEE</a></li>
+        <li><a href="{% url 'shop:feestructure' %}">FEE Structure</a></li>
+    </ul>
+     
+    {% block heading %}
+        <h1>Home Page</h1>
+    {% endblock heading %}
+</body>
+</html>
