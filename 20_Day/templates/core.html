@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core | Home Page</title>
+</head>
+<style>
+    th,td{
+        border:2px solid blue;
+        text-align:center;
+    }
+</style>
+<body>
+    <h1>Shop Page W....</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll_No</th>
+                <th>Student_ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in db %}
+                <tr>
+                    <td>{{d.name}}</td>
+                    <td>{{d.roll_no}}</td>
+                    <td>{{d.stuid}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        
+
+    <form action="" method="get">
+        <table>
+            {{form.as_p}}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
