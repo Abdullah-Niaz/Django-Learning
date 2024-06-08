@@ -10,6 +10,27 @@ fee_urls ={
 }
 shop = 'shop'
 
+def showFormData(request):
+    if(request.method=='POST'):
+        fm = FormRegistration(request.POST)
+        if(fm.is_valid()):
+            name = fm.cleaned_data['username']
+            Email = fm.cleaned_data['email']
+            password = fm.cleaned_data['password']
+            print(f"""
+                    Cleaned Data 
+                    Name:  {name}
+                    Email: {Email}
+                    Password: {password}""".format(name,Email,password))
+            result = {
+                        "name":name,
+                        "email":Email,
+                        "password":password
+                    }
+    else:
+        fm = FormRegistration()
+    return render(request,'showFormData.html',{"form":fm,"result":result})
+
 def fee(request):
     sh = EcommerceProduct.objects.all().values()
     f = FormRegistration()
