@@ -1,0 +1,49 @@
+Making Forms 
+CSRF ( Cross Site Request Foregery Token)
+Post and Get Method 
+Request and Response Objects
+Geting Data From Form & Validating it 
+Get Clean Data Only 
+
+
+How to Send Get Request
+    - Open Browser and write url hit enter this is by defalut get Request
+    - Anchor Tag
+    - Form Tag Contains Method="GET"
+    - Form tag with specifiying method is default GET
+
+
+How to Send Post Request
+    - from tag contains method="POST"
+
+
+Django form and field validation 
+    is_valid() 
+    form.is_valid()
+
+    Cleaned _Data 
+
+
+
+
+form.py
+class StudentForm(forms.Form):
+    name  = forms.CharField()
+    email = forms.EmailField()
+
+
+views.py
+
+from .form import *
+
+def showData(request):
+    if(request.method=="POST"):
+        fm  = StudentForm(request.POST)
+        if(fm.is_valid()):
+            print("Form validated")
+            print("Name: ",fm.cleaned_data['name'])
+            print("Email: ", fm.cleaned_data['email'])
+
+    else:
+        fm  = StudentForm()
+    return render(request,'showData',{"fm":fm})
