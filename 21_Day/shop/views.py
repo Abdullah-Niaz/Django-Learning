@@ -12,6 +12,7 @@ shop = 'shop'
 
 def showFormData(request):
     if(request.method=='POST'):
+        print("Request is coming from Post Method")
         fm = FormRegistration(request.POST)
         if(fm.is_valid()):
             name = fm.cleaned_data['username']
@@ -29,6 +30,7 @@ def showFormData(request):
                     }
     else:
         fm = FormRegistration()
+        print("Request is coming from Get Method")
     return render(request,'showFormData.html',{"form":fm,"result":result})
 
 def fee(request):
