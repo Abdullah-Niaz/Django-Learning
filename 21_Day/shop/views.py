@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse,HttpResponseRedirect
 from  .models import *
 from .forms import *
 # Create your views here.
@@ -9,6 +9,10 @@ fee_urls ={
     "feestructure": "/feestructure/"
 }
 shop = 'shop'
+
+def succesfulDataSubmission(request):
+    return render(request, "success.html")
+
 
 def showFormData(request):
     if(request.method=='POST'):
@@ -23,15 +27,19 @@ def showFormData(request):
                     Name:  {name}
                     Email: {Email}
                     Password: {password}""".format(name,Email,password))
+            
+
             result = {
                         "name":name,
                         "email":Email,
                         "password":password
                     }
+        
+        return HttpResponseRedirect("/shop/success/")
     else:
         fm = FormRegistration()
         print("Request is coming from Get Method")
-    return render(request,'showFormData.html',{"form":fm,"result":result})
+    return render(request,'showFormData.html',{"form":fm})
 
 def fee(request):
     sh = EcommerceProduct.objects.all().values()

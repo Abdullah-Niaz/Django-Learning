@@ -7,4 +7,5 @@ urlpatterns = [
     path('fee/', views.fee, name='fee'),
     path('fee-structure/', views.feestructure, name='feestructure'),
     path('showFormData/', views.showFormData, name='showFormData'),
+    path('success/', views.succesfulDataSubmission, name='success'),
 ]
