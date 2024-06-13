@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-</head>
-<body>
+  </head>
+  <style>
+    .error-list{
+        color: red;
+        font-size:10px;
+    }
+    .error{
+        color:red;
+    }
+    .error:fields.label_tag{
+        display:none;
+    }
+  </style>
+  <body>
     <form action="" method="POST" novalidate>
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Submit">
+      {% csrf_token %}
+      {{form}} 
+      {% comment %} {{form.non_field_errors}} 
+      {% for fields in form %}
+        <div>
+            {{fields.label_tag}} {{fields}} <span class="error-list"> {{fields.errors |  striptags }} </span>
+        </div>
+      {% endfor %} {% endcomment %}
+      <input type="submit" value="Submit" />
     </form>
-</body>
+  </body>
 </html>
