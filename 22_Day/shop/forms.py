@@ -33,7 +33,7 @@ class ShopForm(forms.Form):
             raise forms.ValidationError("Email is required.")
         if len(val_email) < 12:
             raise forms.ValidationError("Enter an email with more than 12 characters.")
-    #     return val_email
+        return val_email
     
 
 
