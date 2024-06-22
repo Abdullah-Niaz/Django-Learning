@@ -9,7 +9,7 @@ def registration(request):
         fm = Registration(request.POST)
         if(fm.is_valid()):
             fm.save()
-            messages = (request,messages.SUCCESS,'Ho Gea Bahi Submit')
+            messages.add_message(request,messages.SUCCESS,'Ho Gea Bahi Submit')
     else:
         fm = Registration()
     return render(request, "shop/regestration.html",{'form':fm})
