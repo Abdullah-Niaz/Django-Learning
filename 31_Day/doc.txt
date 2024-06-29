@@ -1,0 +1,55 @@
+Cookies:
+    - A Cookies is asmall pices of text data set by the web server that resided on the client machine.
+    - one it's been set the client automatically returns the cookie to the web server with each request taht is makes.
+    - This allows the server to place value it wishes to remember in the cookies, and have access to themw hen creating a response.
+
+Django Cookies:
+    HttpRequest.COOKIES - A dictonary containing all cookies. Keys and values are strings.
+    - Syntax - HttpRequest.set_cookies(key,value="")
+    - Example:
+        - set_cookies("name","sonam")
+
+Creating Cookie
+
+    - max_age 
+        - set_cookies("name","sonam",max_age=60*60*24*10)
+        - This will set the cookie to expire in 10 days.
+    - expires
+        - set_cookies("name","sonam",expires=datetime.datetime.now()+datetime.timedelta(days=10))
+    - path 
+        - set_cookies("name","sonam",path="/")
+        - This will set the cookie to be available only for the specified path.
+    - domain
+        - set_cookies("name","sonam",domain="example.com") 
+        - This will set the cookie to be available only for the specified domain.
+    - secure
+        - set_cookies("name","sonam",secure=True)
+        - This will set the cookie to be available only for the secure connection.
+    - httponly
+        - set_cookies("name","sonam",httponly=True)
+        - This will set the cookie to be available only for the secure connection.
+    - samesite
+        - set_cookies("name","sonam",samesite="strict")
+        - This will set the cookie to be available only for the secure connection.
+
+
+Reading / Accessing Cookie
+    - HttpRequest.COOKIES - A disctionary containing all cookies. Keys and values are strings. 
+        - Syntax - HttpRequest.COOKIES["key"]
+        - Example - HttpRequest.COOKIES["name"]
+        - Example - HttpRequest.COOKIES["name",deafult]
+
+    
+Replace/Append Cookies
+    when we assign a new value to cookies, the current cookie are not replaced The new cookie is parsed and its name value pair is appended to list. The Exception is when you assign a new cookie with the same name ( and same domain and path, if they exist) as a cookie taht alread exits. In this case the old value is replaced with the new. 
+        - Example 
+            -- it will reaplce the first cookies with the second one.
+                set_cookie("name","Sonam")
+                set_cookie("name","rahul")
+            -- it wil append the cooky to the cookies
+                set_cookie("name","Sonam")
+                set_cookie("age",30)
+
+Deleting Cookies:
+    HttpResponse.delete_cookie(key,path='/',domain=None) - This method is used to delete the cookie based on given key with same domain and path, if they were set, otherwise the cookie may not be deleted. 
+    
