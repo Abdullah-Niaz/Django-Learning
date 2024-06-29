@@ -1,0 +1,17 @@
+Session Framwork 
+    - The session Framwork lets you store and retrieve arbitrary data on a per-site-visitor basis. 
+    - It store data on the server side and abstracts the sending and receving of cookies. Cookies contains a session ID not the data itself. 
+    - By deafult, Django stores session in your database.
+    - As it stores session in databaseso it is mandatory to run makemigrations and migrate to use session. It will create required tables.
+    - Session data is stored in the django_session table.
+    
+
+
+A way to store the database cookies
+    - database-backend sessions. if you want to use a database-backend session, you need to add 'django.contrib.sessins' to you INSTALLED_APPS setting. Once you have configured you installation, run manage.py migrate to isntall  the single database.
+
+    - File-based session. To use file based session, set the SESSION_ENGINE setting to 'django.contrib.sessions.backends.file'. You mgith also want to se the SESSION_FILE_PATH setting (which defaults to output from tempfile.gettempdir(), most likely/tmp) to control where django stores session fils. Be sure to check taht your web server has persmission to read and wite to this location.
+
+    - cookie-based sessions. To use cookeis-baseed sessions, set the SESSION_ENGINE setting to 'django.contrib.sessions.backends.signed_cookies'. The session data will be stored using Django tools for cryptographic signing and the SECRET_KEY setting.
+
+    - cached session. for better performance, yo may want to use a cache-based session backend. To store session data using Dajngo cache system you'll first need to make sure you've confiured your cache. 

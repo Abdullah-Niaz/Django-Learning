@@ -1,0 +1,16 @@
+Using session in views
+    - When SessionMiddleware is activated, each HttpRequest object, the first argument to any Django view function will have a session attribute,which is a dictionary like object. 
+    - Session data is stored in the database, and is available on every request.
+
+    - Set Item
+        request.session['key'] = 'value'
+    
+    - get Item 
+        returned_value = request.session['key']
+
+    - Delete item 
+        del request.session['key']
+        This raises KeyError if the given key isn't already in the session.
+
+    - Contains
+        'key' in request.session 
