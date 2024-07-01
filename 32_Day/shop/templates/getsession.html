@@ -1,7 +1,19 @@
 {% extends 'setsession.html' %}
 
+<div class="container">
 {% block fheading%}
     <h1>Get Session</h1>
-    <b>Name: </b>{{name}} <br>
-    <b>Age: </b> {{age}} <br>
-{% endblock fheading %}
+    {% comment %} <b>Name: </b>{{name}} <br>
+    <b>Age: </b> {{age}} <br> {% endcomment %}
+
+    {% for key,value in items  %}
+    <b>{{key}}</b> : {{value}} <br>
+    {% endfor %}
+
+    {% for key in keys %}
+        <b>{{key}}</b> <br>
+    {% endfor %}
+    {% endblock fheading %}
+</div>
+
+

@@ -15,3 +15,31 @@ A way to store the database cookies
     - cookie-based sessions. To use cookeis-baseed sessions, set the SESSION_ENGINE setting to 'django.contrib.sessions.backends.signed_cookies'. The session data will be stored using Django tools for cryptographic signing and the SECRET_KEY setting.
 
     - cached session. for better performance, yo may want to use a cache-based session backend. To store session data using Dajngo cache system you'll first need to make sure you've confiured your cache. 
+
+
+Session Methods:
+    - keys()
+        keys() method returns a vew object that displays a list of all the keys in the dictionary.
+        Syntax: dict.keys()
+        
+    - item()
+        item() method returns a view object that displays a list of all the keys and values in the
+        dictionary.
+        Syntax: dict.item()
+    
+    - setdefault()
+        setdefault() method returns the value of a specified key. If the key does not exist,
+        insert the specified value when it is retrieved.
+        Syntax: dict.setdefault(key, default_value)
+
+    - clear()
+        clear() method empties the dictionary.
+        Syntax: dict.clear()
+
+    - flush()
+        flush() method empties the session.
+        Syntax: session.flush()
+
+
+get_session_cookie_age() 
+    - it returns the age of session cookies, in seconds. Defaults to SESSION_COOKIE_AGE()
