@@ -1,0 +1,10 @@
+{% extends 'setsession.html' %}
+
+
+{% block fheading %}
+    {% if f %}
+        <h1>{{f}}</h1>
+    {% else %}
+        <h1>Deleted Session Cookies</h1>
+    {% endif %} 
+{% endblock fheading%}
