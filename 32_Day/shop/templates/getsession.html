@@ -13,6 +13,12 @@
     {% for key in keys %}
         <b>{{key}}</b> <br>
     {% endfor %}
+
+
+    <h1>Session Expiry Age: {{request.session.get_expiry_age}}</h1>
+    <h1>Session Expiary Date: {{request.session.get_expiry_date}}</h1>
+    <h1>Session Cookie Age: {{request.session.get_session_cookie_age}}</h1>
+    <h1>Session Close at Browser Close: {{request.session.get_expire_at_browser_close}}</h1>
     {% endblock fheading %}
 </div>
 
