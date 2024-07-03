@@ -1,0 +1,9 @@
+Cache:
+    - A cache is an information technology for the temporary storage(caching ) of web documents, such as web pages, images and other types of web myltimedia, to reduce server lag. 
+    - Caching is one of thos methods which a website implements to become faster. It is ocst efficient and saves CPU processing time.
+    - Django comes with a robust cache system that lets you save dynamic pages so they don't have to calculated for each request.
+    - You can cache the output of specific views. you can cache only the pieces that are difficult to produce, or you can cache your entire site.
+    Following are the options of caching:
+        - Database Caching 
+        - File system Caching
+        - Local memeory Caching
