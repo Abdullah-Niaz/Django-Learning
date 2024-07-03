@@ -1,0 +1,14 @@
+
+Web_Page --------------------> Cache 
+         <--------------------
+
+
+
+How to implements Caching
+    - The per site cache: Once the cache is setup, the simplest way to use caching is to cache your entire site.
+    - The per-view cache: A more granular way to use the cachig framework is by caching the ouptut of individual views.
+    - Template fragment caching: This gives you more control what to cache.
+
+
+    The Per site Cache:
+        
