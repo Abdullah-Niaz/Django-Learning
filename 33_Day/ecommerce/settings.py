@@ -120,6 +120,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 CACHE_MIDDLEWARE_SECONDS = 30
 
+
+
+
+
+# local mem cache
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
