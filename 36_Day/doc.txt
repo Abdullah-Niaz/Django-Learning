@@ -1,0 +1,28 @@
+QuerySet API:
+    A QuerySet cab be defined as a list containing all those objects we have created using ghe Django model.
+    QuerySet is a collection of objects that are returned by a database query. It is a lazy.
+    QuerySet allows you to read the data from the database, filter it and order it.
+
+    query_property - This property is used to get sql query of query set.
+    Syntax: QuerySet.query
+
+
+Methods that return new QuerySet
+    Retrieving all objects:
+    all() - Returns all objects in the database.
+        Example: Students.obects.all()
+    get() - Returns a single object.
+        Example: Students.objects.get(id=1)
+    filter() - Returns a new QuerySet containing objects that match the given lookup parameters.
+        Example: Students.objects.filter(name='John')
+    exclude() - Returns a new QuerySet containing objects that do not match the given lookup parameters.
+        Example: Students.objects.exclude(name='John')
+    order_by() - Returns a new QuerySet ordered by the passed field(s).
+                     
+    reverse() - Returns a new QuerySet with the ordering reversed.
+    distinct() - Returns a new QuerySet that uses SELECT DISTINCT.
+    Values() - Returns a new QuerySet that returns dictionaries instead of model instances.
+    Values_list() - Returns a new QuerySet that returns lists instead of model instances.
+    Values_list() - Returns a new QuerySet that returns lists instead of model instances.
+    Values_list() - Returns a new QuerySet that returns lists instead of model instances.
+    
